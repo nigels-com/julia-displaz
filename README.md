@@ -38,7 +38,8 @@ To run the container in the above examples would require the following
 
 if using the locally built image...
 
-```docker run -it \
+```
+docker run -it \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
@@ -47,7 +48,8 @@ if using the locally built image...
 ```
 
 if using the docker repository image...
-```docker run -it \
+```
+docker run -it \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
