@@ -26,9 +26,9 @@ WORKDIR /usr/local/displaz/build_external
 RUN cmake ../thirdparty/external && make -j4
 
 WORKDIR /usr/local/displaz/build
-RUN cmake .. && make -j4
+RUN cmake .. && make -j4 install
 
-ENV PATH "/usr/local/displaz/build/bin/:${PATH}"
+ENV PATH "/usr/local/bin/:${PATH}"
 
 
 WORKDIR /playpen
