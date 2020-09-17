@@ -7,8 +7,15 @@ getting a container to support a GUI is trivial (at least to do it in a hacky wa
 [here](https://medium.com/better-programming/running-desktop-apps-in-docker-43a70a5265c4) for windows and 
 [here](http://wiki.ros.org/docker/Tutorials/GUI) for Linux.
 
+## Get the image
 
-## Build the image
+### Option 1. Access the public image
+This is intended to be an open docker image to encourage use of displaz and julia
+
+the latest image can be access from ```docker pull cognitiveearthdocker/julia-displaz```
+
+
+### Option 2. Build the image from github source
 After cloning this repository build the image by running this command in the project directory (that contains the Dockerfile) include the fullstop at the end of the line.
 
 ```docker build --tag julia-displaz:latest .```
@@ -18,6 +25,10 @@ After cloning this repository build the image by running this command in the pro
 Run the command that allows Xwindows connections from non-local sources
 
 ```xhost +local:root```
+
+This is crude and leaves your system open to security vulnerabilities. So after experimenting close with 
+
+```xhost -local:root```
 
 ### Windows
 Install an XServer application
