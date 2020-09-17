@@ -9,16 +9,17 @@ getting a container to support a GUI is trivial (at least to do it in a hacky wa
 
 
 ## Build the image
-After cloning this repository build the image by running this command in the project directory (that contains the Dockerfile)
+After cloning this repository build the image by running this command in the project directory (that contains the Dockerfile) include the fullstop at the end of the line.
+
 ```docker build --tag julia-displaz:latest .```
 
-# Prepare your environment
-## Linux 
+## Prepare your environment
+### Linux 
 Run the command that allows Xwindows connections from non-local sources
 
 ```xhost +local:root```
 
-## Windows
+### Windows
 Install an XServer application
 
 ## Run the image as a container
