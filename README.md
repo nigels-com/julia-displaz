@@ -36,12 +36,23 @@ Install an XServer application
 ## Run the image as a container
 To run the container in the above examples would require the following 
 
+if using the locally built image...
+
 ```docker run -it \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
     --name=julia-displaz \
-    julia-displaz
+    julia-displaz:latest
+```
+
+if using the docker repository image...
+```docker run -it \
+    --env="DISPLAY" \
+    --env="QT_X11_NO_MITSHM=1" \
+    --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+    --name=julia-displaz \
+    cognitiveearthdocker/julia-displaz:latest
 ```
 
 This should then give a command prompt inside the container that can be used to execute Julia or Displaz.
